@@ -4,17 +4,17 @@ caminho das rotas que o pessoal do front-end pode utilizar e seus JSON com exemp
 ## IP base ##
 porta ``:8080`` aberta para comunicação
 * Server AWs do vinicius: ``18.206.68.106``
-* Serve local: ``localhost``
+* Serve em maquina local: ``localhost``
 ## rotas disponiveis ##
 IP + porta + rotas
-rota base: ``18.206.68.106:8080/home ``
-rota base local: ``localhost:8080/home``
+rota base: ``18.206.68.106:8080/home `` <br/>
+rota base local: ``localhost:8080/home`` <br/>
 Apartir desse caminho as outras rotas se ramificam
 ### rota em /home ###
 Sendo a rota mais basal as que seguirem ela serão rotas que se ramificam dela.
 #### /login ####
-tipo: post
-faz login de um usuario e retorna um token que será utilizado durante a sessão.
+tipo: post<br/>
+faz login de um usuario e retorna um token que será utilizado durante a sessão.<br/>
 exemplo em json:
 ```
 {
@@ -23,7 +23,7 @@ exemplo em json:
 } 
 ```
 #### /validarToken ####
-tipo: post
+tipo: post<br/>
 valida um token.
 ```
 {
@@ -33,11 +33,16 @@ valida um token.
 ### rota em /salvar ###
 sendo uma ramificação de ``/home ``, essa rota tem como objetivo salvar entidades no banco de dados.
 #### /paciente ####
-tipo: post
+tipo: post<br/>
 Salva um paciente no banco de dados.
 ```
 {
-	<?>
+    "id": "5",
+    "user": "pessoa",
+    "pass": "$2a$10$UTQyaQcs41a69XOrVLevvOBdva.pMEbYAIJU2rzNhZYBeemAntS3a",
+    "nome": "lucas maranhao",
+    "telefone": "", 
+    "DataNascimento": "" # não funciona
 }
 ```
 
@@ -49,7 +54,12 @@ tipo: post
 Salva um Usuario no banco de dados.
  ```
 {
-	<?>
+    "id": "",
+    "user": "Diego",
+    "pass": "$2a$10$w5YOpDG9UzFhWdrBKyIPtONwOoukBz1FzQmrOgbVyvinRnIMdhaO.", #senha criptografada
+    "nome": "Diego da Silva",
+    "telefone": "",
+    "DataNascimento": "" #Não sei como é para colocar
 }
 ```
 
@@ -61,7 +71,12 @@ tipo: post
 Salva um professor no Banco de dados.
  ```
 {
-	<?>
+    "id": "",
+    "user": "Fulano",
+    "pass": "$2a$10$w5YOpDG9UzFhWdrBKyIPtONwOoukBz1FzQmrOgbVyvinRnIMdhaO.", #senha criptografada
+    "nome": "Fulano Silveira",
+    "telefone": "",
+    "DataNascimento": ""
 }
 ```
 #### /estagiario ####
@@ -72,14 +87,19 @@ tipo: post
 Salva um estagiario no Banco de dados.
  ```
 {
-	<?>
+    "id": "",
+    "user": "Matheus",
+    "pass": "$2a$10$w5YOpDG9UzFhWdrBKyIPtONwOoukBz1FzQmrOgbVyvinRnIMdhaO.", #senha criptografada
+    "nome": "Matheus ferro",
+    "telefone": "",
+    "DataNascimento": ""
 }
 ```
 ### rotas em /editar ###
 sendo uma ramificação de ``/home ``, essa rota tem como objetivo editar entidades do banco de dados.
 
 #### /paciente ####
-tipo: put
+tipo: put<br/>
 Edita um paciente no banco de dados.
 ```
 {
