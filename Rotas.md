@@ -4,7 +4,7 @@ caminho das rotas que o pessoal do front-end pode utilizar e seus JSON com exemp
 ## IP base ##
 porta ``:8080`` aberta para comunicação
 * Server AWs do vinicius: ``18.206.68.106``
-* Serve em maquina local: ``localhost``
+* Serve local: ``localhost``
 ## rotas disponiveis ##
 IP + porta + rotas
 rota base: ``18.206.68.106:8080/home `` <br/>
@@ -37,26 +37,26 @@ tipo: post<br/>
 Salva um paciente no banco de dados.
 ```
 {
-    "id": "5",
-    "user": "pessoa",
-    "pass": "$2a$10$UTQyaQcs41a69XOrVLevvOBdva.pMEbYAIJU2rzNhZYBeemAntS3a",
-    "nome": "lucas maranhao",
+    "id": "", ## autoincrementa
+    "user": "Lucas",
+    "pass": "12345",
+    "nome": "Lucas maranhao",
     "telefone": "", 
-    "DataNascimento": "" # não funciona
+    "DataNascimento": "2005-04-19" ## formato que funcionou 'yyyy-mm-dd'
 }
 ```
 
 #### /usuario ####
 tipo: post 
 >[!NOTE]  
->precisa de token
+>precisa de token ADMIN
 
 Salva um Usuario no banco de dados.
  ```
 {
     "id": "",
     "user": "Diego",
-    "pass": "$2a$10$w5YOpDG9UzFhWdrBKyIPtONwOoukBz1FzQmrOgbVyvinRnIMdhaO.", #senha criptografada
+    "pass": "dieguinho",
     "nome": "Diego da Silva",
     "telefone": "",
     "DataNascimento": "" #Não sei como é para colocar
@@ -66,14 +66,14 @@ Salva um Usuario no banco de dados.
 #### /professor ####
 tipo: post
 >[!NOTE]  
->precisa de token
+>precisa de token ADMIN
 
 Salva um professor no Banco de dados.
  ```
 {
     "id": "",
     "user": "Fulano",
-    "pass": "$2a$10$w5YOpDG9UzFhWdrBKyIPtONwOoukBz1FzQmrOgbVyvinRnIMdhaO.", #senha criptografada
+    "pass": "1234",
     "nome": "Fulano Silveira",
     "telefone": "",
     "DataNascimento": ""
@@ -82,47 +82,59 @@ Salva um professor no Banco de dados.
 #### /estagiario ####
 tipo: post
 >[!NOTE]  
->precisa de token
+>precisa de token ADMIN ou PROFESSOR
 
 Salva um estagiario no Banco de dados.
  ```
 {
     "id": "",
     "user": "Matheus",
-    "pass": "$2a$10$w5YOpDG9UzFhWdrBKyIPtONwOoukBz1FzQmrOgbVyvinRnIMdhaO.", #senha criptografada
+    "pass": "XxmatheusxX",
     "nome": "Matheus ferro",
     "telefone": "",
     "DataNascimento": ""
 }
 ```
 ### rotas em /editar ###
-sendo uma ramificação de ``/home ``, essa rota tem como objetivo editar entidades do banco de dados.
+sendo uma ramificação de ``/home ``, essa rota tem como objetivo editar entidades do banco de dados sabendo o ID delas no banco.
 
 #### /paciente ####
 tipo: put<br/>
 Edita um paciente no banco de dados.
 ```
 {
-	<?>
+    "id": "6",
+    "user": "Lucas",
+    "pass": "1234",
+    "nome": "Lucas maranhão da silva pereira",
+    "telefone": "",
+    "DataNascimento": ""
 }
 ```
 
 #### /usuario ####
 tipo: put
 >[!NOTE]  
->precisa de token
+>precisa de token ADMIN
 
-Edita um Usuario no banco de dados.
+Edita um Usuario no banco de dados. <br/>
+Nesse exemplo Diego no banco de dados tinha como nome "Diego da Silva" agora editado será "Diego do Nascimento" <br/>
+exemplo em JSON:
  ```
 {
-	<?>
+    "id": "7",
+    "user": "Diego",
+    "pass": "dieguinho",
+    "nome": "Diego do Nacimento",
+    "telefone": "",
+    "DataNascimento": ""
 }
 ```
 
 #### /professor ####
 tipo: put
 >[!NOTE]  
->precisa de token
+>precisa de token ADMIN
 
 Edita um professor no Banco de dados.
  ```
@@ -133,7 +145,7 @@ Edita um professor no Banco de dados.
 #### /estagiario ####
 tipo: put
 >[!NOTE]  
->precisa de token
+>precisa de token ADMIN ou PROFESSOR
 
 Edita um estagiario no Banco de dados.
  ```
@@ -141,3 +153,28 @@ Edita um estagiario no Banco de dados.
 	<?>
 }
 ```
+
+### rotas em /listAll ###
+Sendo uma ramificação de ``/home``, essa rota tem como objetivo listar todas as entidades no banco de dados
+> [!WARNING]  
+> Ainda não implementado no código
+
+#### /usuario ####
+tipo: get<br/>
+lista todos os usuarios.
+<br/>
+
+#### /professor ####
+tipo: get<br/>
+lista todos os professores.<br/>
+<br/>
+
+#### /estagiario ####
+tipo: get<br/>
+lista todos os estagiarios.<br/>
+<br/>
+
+#### /paciente ####
+tipo: get<br/>
+lista todos os pacientes.<br/>
+<br/>
