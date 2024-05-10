@@ -159,6 +159,11 @@ Sendo uma ramificação de ``/home``, essa rota tem como objetivo listar todas a
 > [!WARNING]  
 > Ainda não implementado no código
 
+#### /paciente ####
+tipo: get<br/>
+lista todos os pacientes.<br/>
+<br/>
+
 #### /usuario ####
 tipo: get<br/>
 lista todos os usuarios.
@@ -172,9 +177,4 @@ lista todos os professores.<br/>
 #### /estagiario ####
 tipo: get<br/>
 lista todos os estagiarios.<br/>
-<br/>
-
-#### /paciente ####
-tipo: get<br/>
-lista todos os pacientes.<br/>
 <br/>
