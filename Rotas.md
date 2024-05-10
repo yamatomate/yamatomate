@@ -59,7 +59,7 @@ Salva um Usuario no banco de dados.
     "pass": "dieguinho",
     "nome": "Diego da Silva",
     "telefone": "",
-    "DataNascimento": "" #Não sei como é para colocar
+    "DataNascimento": "" #yyyy-mm-dd
 }
 ```
 
@@ -72,11 +72,11 @@ Salva um professor no Banco de dados.
  ```
 {
     "id": "",
-    "user": "Fulano",
-    "pass": "1234",
-    "nome": "Fulano Silveira",
+    "user": "Patricia",
+    "pass": "3566patricia",
+    "nome": "Patricia",
     "telefone": "",
-    "DataNascimento": ""
+    "DataNascimento": ""  #yyyy-mm-dd
 }
 ```
 #### /estagiario ####
@@ -88,11 +88,11 @@ Salva um estagiario no Banco de dados.
  ```
 {
     "id": "",
-    "user": "Matheus",
-    "pass": "XxmatheusxX",
-    "nome": "Matheus ferro",
+    "user": "Junior,
+    "pass": "JoselitoJR",
+    "nome": "Joselito",
     "telefone": "",
-    "DataNascimento": ""
+    "DataNascimento": ""  #yyyy-mm-dd
 }
 ```
 ### rotas em /editar ###
