@@ -2,8 +2,8 @@
 ## 1. instalação ##
 video de referencia: https://youtu.be/_tyw5KZQneo?si=B8ks7WQ7TtP47QoW
 pesquise java 17 ou https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
-e procure pela opção Windows 'x64 Installer' e execute
-apos instalar vamos configurar o java no coomputador
+e procure pela opção Windows 'x64 Installer' e execute <br/>
+apos instalar vamos configurar o java no coomputador <br/>
 
 ## 2. configurando o java ##
 no explorador de arquivos e vá na pasta do ``disco local``, dentro dele entre em ``arquivos de Programas`` e procure JDK-17
@@ -20,5 +20,9 @@ feito isso java 17 está configurado se quiser testar vá ao terminal e digite `
  para terminar a execução aperte junto CRTL+C
 
  # instalando MySQL #
- video de referencia: https://youtu.be/a5ul8o76Hqw?si=QcZFRBHGeLfhOcDy
- siga os passo do video só que na hora de criar usuario a senha será ``password``
+ video de referencia: ``https://youtu.be/a5ul8o76Hqw?si=QcZFRBHGeLfhOcDy`` <br/>
+ ou guanabara: ``https://youtu.be/5JbAOWJbgIA?si=fjWMJrdQAm9fjciR`` <br/>
+ siga os passo do video só que na hora de criar usuario a senha será ``password`` <br/>
+ instalado e configurado Mysql se quiser que ele tenha alguns usuario para testar assista isso ``https://youtu.be/w6OYS_M7hTM?si=z4zQi6el5QoCI_1v&t=716``<br/>
+ com um arquivo DUMP que serve de backup: [Aquivo Dump do banco de dados](https://github.com/yamatomate/yamatomate/tree/main/Dump20240510)
+
