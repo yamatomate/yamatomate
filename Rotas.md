@@ -30,6 +30,7 @@ valida um token.
 	<?>
 }
 ```
+
 ### rota em /salvar ###
 sendo uma ramificação de ``/home ``, essa rota tem como objetivo salvar entidades no banco de dados.
 #### /paciente ####
@@ -45,7 +46,6 @@ Salva um paciente no banco de dados.
     "DataNascimento": "2005-04-19" ## formato que funcionou 'yyyy-mm-dd'
 }
 ```
-
 #### /usuario ####
 tipo: post 
 >[!NOTE]  
@@ -139,7 +139,12 @@ tipo: put
 Edita um professor no Banco de dados.
  ```
 {
-	<?>
+    "id": "2",
+    "user": "Fernando",
+    "pass": "amoJava",
+    "nome": "Fernando carvalho",
+    "telefone": "",
+    "DataNascimento": ""
 }
 ```
 #### /estagiario ####
@@ -150,7 +155,12 @@ tipo: put
 Edita um estagiario no Banco de dados.
  ```
 {
-	<?>
+    "id": "5",
+    "user": "Gustavo",
+    "pass": "mhw35",
+    "nome": "Gustavo Lisboa",
+    "telefone": "",
+    "DataNascimento": ""
 }
 ```
 
