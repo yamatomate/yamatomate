@@ -182,9 +182,7 @@ lista todos os usuarios.
 #### /professor ####
 tipo: get<br/>
 lista todos os professores.<br/>
-<br/>
 
 #### /estagiario ####
 tipo: get<br/>
 lista todos os estagiarios.<br/>
-<br/>
