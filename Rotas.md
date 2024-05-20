@@ -166,8 +166,6 @@ Edita um estagiario no Banco de dados.
 
 ### rotas em /listAll ###
 Sendo uma ramificação de ``/home``, essa rota tem como objetivo listar todas as entidades no banco de dados
-> [!WARNING]  
-> Ainda não implementado no código
 
 #### /paciente ####
 tipo: get<br/>
