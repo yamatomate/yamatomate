@@ -193,6 +193,9 @@ Edita um estagiario no Banco de dados.
 ```
 
 ### rotas em /consulta ###
+>[!CAUTION] 
+>Rotas novas adicionadas e documenatdas pelo Diego [README](https://github.com/LTD-Clinicas/backEnd/blob/main/README.md)
+
 sendo uma ramificação de ``/home ``, essa rota tem como objetivo consultar entidades no banco de dados.
 
 #### /salvar ####
