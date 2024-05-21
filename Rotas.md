@@ -5,7 +5,34 @@ caminho das rotas que o pessoal do front-end pode utilizar e seus JSON com exemp
 porta ``:8080`` aberta para comunicação
 * Server AWs do vinicius: ``18.206.68.106``
 * Serve local: ``localhost``
-## rotas disponiveis ##
+## mapa das rotas ##
+
+```
+home/
+├── /login
+├── /validarToken
+├── /salvar
+│   ├── /paciente
+│   ├── /usuario
+│   ├── /coordeador
+│   └── /funcionario
+├── /editar
+│   ├── /paciente
+│   ├── /usuario
+│   ├── /coordenador
+│   └── /funcionario
+└── /consultar
+    ├── /salvar
+    ├── /listar
+    ├── /por-clinica
+    ├── /agendar
+    ├── /deletar
+    ├── /info
+    ├── /listarByDay
+    └── /listarByPaciente
+```
+
+## descrição das rotas ##
 IP + porta + rotas
 rota base: ``18.206.68.106:8080/home `` <br/>
 rota base local: ``localhost:8080/home`` <br/>
@@ -63,12 +90,12 @@ Salva um Usuario no banco de dados.
 }
 ```
 
-#### /professor ####
+#### /coordenador ####
 tipo: post
 >[!NOTE]  
 >precisa de token ADMIN
 
-Salva um professor no Banco de dados.
+Salva um coordenador no Banco de dados.
  ```
 {
     "id": "",
@@ -79,12 +106,12 @@ Salva um professor no Banco de dados.
     "DataNascimento": ""  #yyyy-mm-dd
 }
 ```
-#### /estagiario ####
+#### /funcionario ####
 tipo: post
 >[!NOTE]  
 >precisa de token ADMIN ou PROFESSOR
 
-Salva um estagiario no Banco de dados.
+Salva um funcionario no Banco de dados.
  ```
 {
     "id": "",
@@ -95,6 +122,7 @@ Salva um estagiario no Banco de dados.
     "DataNascimento": ""  #yyyy-mm-dd
 }
 ```
+
 ### rotas em /editar ###
 sendo uma ramificação de ``/home ``, essa rota tem como objetivo editar entidades do banco de dados sabendo o ID delas no banco.
 
@@ -131,7 +159,7 @@ exemplo em JSON:
 }
 ```
 
-#### /professor ####
+#### /coordenador ####
 tipo: put
 >[!NOTE]  
 >precisa de token ADMIN
@@ -147,10 +175,10 @@ Edita um professor no Banco de dados.
     "DataNascimento": ""
 }
 ```
-#### /estagiario ####
+#### /funcionario ####
 tipo: put
 >[!NOTE]  
->precisa de token ADMIN ou PROFESSOR
+>precisa de token ADMIN ou COORDENADOR
 
 Edita um estagiario no Banco de dados.
  ```
@@ -163,6 +191,94 @@ Edita um estagiario no Banco de dados.
     "DataNascimento": ""
 }
 ```
+
+### rotas em /consulta ###
+sendo uma ramificação de ``/home ``, essa rota tem como objetivo consultar entidades no banco de dados.
+
+#### /salvar ####
+tipo: post <br/>
+salva uma consulta no banco de dados.
+```
+{
+    <?>
+}
+```
+
+#### /listar ####
+tipo: get<br/>
+?
+
+```
+{
+    <?>
+}
+```
+
+#### /por-clinica ####
+tipo: get <br/>
+?
+
+```
+{
+    <?>
+}
+```
+
+#### /agendar ####
+tipo: put <br/>
+?
+
+```
+{
+    <?>
+}
+```
+
+#### /deletar ####
+tipo: delete (é delete mesmo) <br/>
+?
+
+```
+{
+    <?>
+}
+```
+
+#### /info ####
+tipo: put <br/>
+?
+
+```
+{
+    <?>
+}
+```
+
+#### /listarByDay ####
+tipo: get <br/>
+?
+
+```
+{
+    <?>
+}
+```
+
+#### /listarByPaciente ####
+tipo: get <br/>
+?
+
+```
+{
+    <?>
+}
+```
+
+
+## outras rotas ##
+
+>[!CAUTION]  
+>não tenho certeza se essas rotas ainda estão disponiveis
 
 ### rotas em /listAll ###
 Sendo uma ramificação de ``/home``, essa rota tem como objetivo listar todas as entidades no banco de dados
