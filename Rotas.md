@@ -200,88 +200,88 @@ sendo uma ramificação de ``/home ``, essa rota tem como objetivo consultar ent
 
 #### /salvar ####
 tipo: post <br/>
-salva uma consulta no banco de dados.
+salva uma consulta no banco de dados.<br/>
 ```
 {
-    <?>
+"dia": "2024-05-27",
+"clinica": "1" #(id da clinica),
+"horaInicio": "15:00:00",
+"horaFim": "16:00:00",
+"paciente": "nicolas",
+"info": ""
 }
 ```
-
 #### /listar ####
 tipo: get<br/>
-?
+>[!NOTE]  
+>precisa de token ADMIN ou COORDENADOR
 
-```
-{
-    <?>
-}
-```
+End point para listar todas as consultas agendada<br/>
+<br/>
 
 #### /por-clinica ####
-tipo: get <br/>
-?
+tipo: get<br/>
+>[!NOTE]  
+>precisa de token ADMIN ou COORDENADOR
 
-```
-{
-    <?>
-}
-```
-
-#### /agendar ####
-tipo: put <br/>
-?
-
-```
-{
-    <?>
-}
-```
+End point para listar todas as consultas agendadas pelo o paciente mas filtrando por clínica.<br/>
+<br/>
 
 #### /deletar ####
 tipo: delete (é delete mesmo) <br/>
-?
+>[!NOTE]  
+>precisa de token ADMIN ou COORDENADOR
+
+End point para excluir alguma consulta agendada(apenas certos usuario tem acesso a esse end-point).<br/>
 
 ```
 {
-    <?>
+	"id": 1
 }
 ```
 
 #### /info ####
 tipo: put <br/>
-?
+>[!NOTE]  
+>precisa de token ADMIN ou FUNCIONARIO
+
+End point para "setar" as informações de funcionário que irá atender o paciente com alguma informação adicional.<br/>
 
 ```
 {
-    <?>
+	"consulta": 1,
+	"info": "É neuro-divergente",
+	"user": "diego"
 }
 ```
 
 #### /listarByDay ####
 tipo: get <br/>
-?
+>[!NOTE]  
+>precisa de token ADMIN ou FUNCIONARIO
+
+End point para listar todas as consultas agendadas por data e clínica.<br/>
 
 ```
 {
-    <?>
+	"clinica": 1 #por id,
+	"date": "2024-05-27"
 }
+   
 ```
 
 #### /listarByPaciente ####
 tipo: get <br/>
-?
+End point para listar todas as consultas agendadas pelo o paciente mas filtrando por usuário do paciente.<br/>
 
 ```
 {
-    <?>
+	"paciente": "diego"
 }
 ```
 
 
 ## outras rotas ##
-
->[!CAUTION]  
->não tenho certeza se essas rotas ainda estão disponiveis
 
 ### rotas em /listAll ###
 Sendo uma ramificação de ``/home``, essa rota tem como objetivo listar todas as entidades no banco de dados
